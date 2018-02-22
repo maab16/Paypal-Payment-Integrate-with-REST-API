@@ -74,8 +74,8 @@ $createPayment->setTransaction([
 $doccument_root = 'http://localhost/payment/Paypal-Payment-Integrate-with-REST-API';
 
 $createPayment->setRedirectUrl([
-	'setReturnUrl' => $doccument_root.'/App/libs/pay.php?approved=true',
-	'setCancelUrl' => $doccument_root.'/App/libs/pay.php?approved=false'
+	'setReturnUrl' => $doccument_root.'/App/libs/pay.php?success=true',
+	'setCancelUrl' => $doccument_root.'/App/libs/pay.php?success=false'
 ]);
 
 // Payment

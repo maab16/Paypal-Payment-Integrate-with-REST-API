@@ -6,7 +6,7 @@ use App\libs\PaymentProcess;
 session_start();
 require __DIR__.'/../../vendor/autoload.php';
 
-if (isset($_GET['approved']) && $_GET['approved'] === 'true') {
+if (isset($_GET['success']) && $_GET['success'] === 'true') {
 
 	$payerId = $_GET['PayerID'];
 
