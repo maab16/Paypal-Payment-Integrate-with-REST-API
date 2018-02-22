@@ -24,6 +24,6 @@ class PaypalApi {
 			self::$_instance = new PaypalApi();
 			return self::$_instance->api;
 		}
-		return false;
+		return self::$_instance->api;
 	}
 }

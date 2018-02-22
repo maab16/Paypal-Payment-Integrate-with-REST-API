@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div class="container">
-		<form method="post" action="App/payment/index.php" style="max-width: 300px;margin: 100px auto;">
+		<form method="post" action="App/public/index.php" style="max-width: 300px;margin: 100px auto;">
 			<div class="form-group">
 				<label for="donation">Donation Amount</label>
 				<input type="number" name="donation" id="donation" class="form-control" placeholder="$10" value="10">

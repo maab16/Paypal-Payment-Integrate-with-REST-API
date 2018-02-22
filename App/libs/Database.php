@@ -18,7 +18,7 @@ class Database
      * @return object 	PDO
      */
 	public function __construct(){
-		$this->_db = new \PDO("mysql:host=localhost;dbname=paypal","root","");
+		$this->_db = new \PDO("mysql:host=localhost;dbname=donation","root","");
 	}
 	/**
      * Get Database Instance
@@ -31,6 +31,7 @@ class Database
 			self::$_instance = new Database();
 			return self::$_instance->_db;
 		}
-		return false;
+
+		return self::$_instance->_db;
 	}
 }
