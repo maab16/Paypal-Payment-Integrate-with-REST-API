@@ -7,6 +7,7 @@ $_SESSION['user_id'] = 1;
 
 require __DIR__.'/../../vendor/autoload.php';
 
+use App\libs\Database;
 use App\libs\PaypalApi;
 
 $api = PaypalApi::getApiInstace();
@@ -21,11 +22,7 @@ $api->setConfig([
 	]
 );
 
-
-var_dump($api);
-
-
-$pdo = new PDO("mysql:host=localhost;dbname=paypal","root","");
+$pdo = Database::getDBInstance();
 
 $stmt = $pdo->prepare("
 
@@ -36,4 +33,3 @@ $stmt = $pdo->prepare("
 $stmt->execute([$_SESSION['user_id']]);
 
 $user = $stmt->fetchObject();
-
